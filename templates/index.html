@@ -6,7 +6,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-    <title>Hand Digit Recognition</title>
+    <title>Draw Recognition</title>
 
     <script type = "text/javascript">
         
@@ -79,6 +79,10 @@
 
         }
 
+        function clearResult(){
+            document.getElementById('result').innerHTML = "";
+        }
+
     </script>
 </head>
 <body onload = "init()">
@@ -89,7 +93,7 @@
 
                 <div class = "col-md-12 text-center>" style = "margin-top: 50px;">
 
-                    <h1>Hand Digit Recognition</h1>
+                    <h1>Draw Object Recognition</h1>
                     <br/><br/>
 
                     Linewidth: <select id = "selWidth">
@@ -106,16 +110,16 @@
                         <option value = "yellow">yellow</option>
                     </select>
                     
-                    <h3 style ="margin-left: 65px;margin-top: 30px">Draw a digit</h3>
+                    <h3 style ="margin-left: 45px;margin-top: 30px">Draw an Object</h3>
     
                     <canvas id = "canvas" width = "280" height = "280" style = "margin-top:20px; border: 2px solid black;" ></canvas>
                     <br/>
 
-                    <button id = "Clear" style = "margin-top: 50px;margin-left: 52px" class = "btn btn-danger" onclick = "clearCanvas()" >Clear</button>
+                    <button id = "Clear" style = "margin-top: 50px;margin-left: 52px" class = "btn btn-danger" onclick = "clearCanvas() ;clearResult(); ">Clear</button>
                     <button id = "Recognition" style = "margin-top: 50px; margin-left: 10px" class = "btn btn-success" onclick = "postImage()">Recognition</button>
                     <br/><br/>
                     <h4 style = "margin-top: 10px;">Result:</span></h4>    
-                    <div id = "result" style = "margin-top: 10px;"></div>
+                    <div id = "result" style = "margin-top: 10px; font-weight: bold; font-size: 1.2em; text-transform: uppercase;"></div>
                 </div>
         </div>
     </div>
