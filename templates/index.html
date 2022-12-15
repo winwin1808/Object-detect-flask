@@ -2,12 +2,11 @@
 <head>
     <meta name="csrf-token" content="csrf-token">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Draw Recognition</title>
-
+    <link rel="icon" type="image/x-icon" href="./assets/logo.png">
     <script type = "text/javascript">
         
         var mousePressed = false;
@@ -85,42 +84,48 @@
 
     </script>
 </head>
-<body onload = "init()">
-
-    <div class = "container">
-
-        <div class = "row">
-
-                <div class = "col-md-12 text-center>" style = "margin-top: 50px;">
-
-                    <h1>Draw Object Recognition</h1>
-                    <br/><br/>
-
-                    Linewidth: <select id = "selWidth">
+<body onload="init()">
+    <div class="container">
+        <div class="home__header">
+            <h1>Draw Object Recognition</h1>
+            <button id="Recognition" onclick="postImage()" class="btn__Recognition">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Recognition
+            </button>
+            <div class="Draw__tools">
+                <button id="Clear" class="btn__clear" onclick="clearCanvas();clearResult();">
+                    <img class="eraser" src="./assets/eraser.svg" alt="eraser">
+                </button>
+                <div class="line__width">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    <select id = "selWidth">
                         <option value = "12" selected = "selected">12</option>
                         <option value = "15">15</option>
                         <option value = "20">20</option>
                         <option value = "25">25</option>
                     </select>
-                    Color: <select id = "selColor">
+                </div>
+                <div class="select__color">
+                    <i class="fa-solid fa-palette"></i>
+                    <select id = "selColor">
                         <option value = "black" selected = "selected">black</option>
                         <option value = "red">red</option>
                         <option value = "blue">blue</option>
                         <option value = "green">green</option>
                         <option value = "yellow">yellow</option>
                     </select>
-                    
-                    <h3 style ="margin-left: 45px;margin-top: 30px">Draw an Object</h3>
-    
-                    <canvas id = "canvas" width = "280" height = "280" style = "margin-top:20px; border: 2px solid black;" ></canvas>
-                    <br/>
-
-                    <button id = "Clear" style = "margin-top: 50px;margin-left: 52px" class = "btn btn-danger" onclick = "clearCanvas() ;clearResult(); ">Clear</button>
-                    <button id = "Recognition" style = "margin-top: 50px; margin-left: 10px" class = "btn btn-success" onclick = "postImage()">Recognition</button>
-                    <br/><br/>
-                    <h4 style = "margin-top: 10px;">Result:</span></h4>    
-                    <div id = "result" style = "margin-top: 10px; font-weight: bold; font-size: 1.2em; text-transform: uppercase;"></div>
                 </div>
+            </div>
+        </div>
+        <div class="home__board">
+            <!-- <h3 style ="margin-left: 45px;margin-top: 30px">Draw an Object</h3> -->
+            <div class="drawing__board" >
+                <canvas id = "canvas" width="1400" height="640" style="border:2px solid black"></canvas>
+            </div>
+            <div class="show__result">
+                <h4 style = "margin-top: 10px;">Result:</span></h4>    
+                <div id = "result" style = "margin-top: 10px; font-weight: bold; font-size: 1.2em; text-transform: uppercase;"></div>
+            </div>
         </div>
     </div>
 </body>

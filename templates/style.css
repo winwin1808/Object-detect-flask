@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    /* overflow: hidden; */
+}
+canvas { display:block; }
+
+/* welcome */
+a {
+    position:absolute;
+    text-decoration:none;
+    color:white;
+    font-weight:100;
+    left:50px;
+    bottom:-20px;
+    transition : 0.3s;
+}
+a:hover {
+    font-weight:300;
+}
+  
+body {
+    color: #000;
+    font-family:Raleway;
+    font-weight: 100;
+    font-size:15px;
+
+    font-weight: bold;
+
+    height:100%;
+    width:100%;
+
+    margin:0;
+    overflow:hidden;
+}
+
+
+/* nav */
+.home__header {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 10px 20px;
+    background-color: #ffd139;
+    box-shadow: 0 2px 5px rgba(8, 8, 8, 0.3);
+}
+
+.btn__Recognition{
+    background-color: rgb(75, 196, 95);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-right: 30px;
+}
+
+.Draw__tools{
+    display: flex;
+}
+
+.Draw__tools select{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn__clear{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.eraser{
+    color: rgb(196, 75, 75);
+    width: 35px;
+    height: 35px;
+}
+
+.line__width,
+.select__color {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.6rem;
+    justify-content: space-around;
+    margin-left: 20px;
+}
+
+.line__width i,
+.select__color i {
+    margin-right: 10px;
+}
+
+.line__width{
+    color: rgb(61, 37, 41);
+}
+
+.select__color{
+    color: rgb(192, 109, 0);
+}
+
+
+/* home */
+.home__board{
+    position: relative;
+}
+
+.drawing__board{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.show__result{
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
