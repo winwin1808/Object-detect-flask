@@ -78,6 +78,7 @@ body.welcome {
     text-decoration: none;
     color: #ffbf27;
     background-color: transparent;
+    z-index: 50;
 }
 .navigate i {
     font-size: 1.5rem;

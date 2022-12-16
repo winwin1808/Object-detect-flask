@@ -111,7 +111,7 @@ body {
 
 .drawing__board{
     display: flex;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     justify-content: center;
 }
 
