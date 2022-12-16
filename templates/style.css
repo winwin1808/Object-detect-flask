@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
     /* overflow: hidden; */
 }
 canvas { display:block; }
@@ -57,7 +58,7 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 1.2rem;
-    margin-left: 10px;
+    margin-left: -10px;
     cursor: pointer;
 }
 
