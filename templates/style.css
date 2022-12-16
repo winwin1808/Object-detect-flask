@@ -57,7 +57,14 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 1.2rem;
-    margin-right: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn__Recognition:hover{
+    color: rgb(75, 196, 95);
+    background-color: white;
+    border: 2px solid rgb(75, 196, 95);
 }
 
 .Draw__tools{
@@ -65,17 +72,28 @@ body {
 }
 
 .Draw__tools select{
-    background-color: transparent;
     cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 .btn__clear{
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 5px;
+    border: 2px solid transparent;
 }
-.eraser{
-    color: rgb(196, 75, 75);
+
+.btn__clear:hover{
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(196, 75, 75);
+}
+
+.eraser {
     width: 35px;
     height: 35px;
 }
