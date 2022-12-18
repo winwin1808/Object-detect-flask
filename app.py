@@ -9,14 +9,16 @@ app = Flask(__name__)
 model = tf.keras.models.load_model('Web\Hand-digit-recoginition-flask\model\keras.h5')
 model.make_predict_function()
 
-
-
 @app.route('/')
 def index():
-    
-    return render_template('index.html')
+    return render_template('WelcomePage.html')
+
+@app.route('/draw/')
+def draw():
+    return render_template('draw.html')
 
 @app.route('/recognize', methods =['POST'])
+
 
 def recognize():
     
@@ -43,7 +45,7 @@ def recognize():
 
         prediction = model.predict(np.expand_dims(image_prediction, axis=0))[0]
         prediction = classes[np.argmax(prediction, axis=0)]
-
+        prediction = prediction.replace('_',' ')
         #run prediction
 
         return jsonify({
@@ -54,3 +56,4 @@ def recognize():
         
 if __name__ == '__main__':
     app.run(debug=True)
+    app.static_folder = 'static'

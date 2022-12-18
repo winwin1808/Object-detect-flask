@@ -7,8 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <title>Welcome to Our product</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/x-icon" href="./assets/logo.png">
-    <link rel="stylesheet" href="./Welcome.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='./assets/logo.png') }}">          
+    <link rel="stylesheet" href="{{ url_for('static', filename='./style/Welcome.css') }}">
+    
 </head>
 <body class="welcome">
     <span id="splash-overlay" class="splash"></span>
@@ -16,11 +17,13 @@
     <main class="welcome__content">
         <div class="welcome__header">
             <p class="flow-text">Welcome to </p>
-            <img class="logo__img" src="./assets/vnuk.png" alt="VNUK_Uni">
+            <image class="logo__img" src="./static/assets/vnuk.png">
+            
+            
         </div>
         <h1 class="title grey-text text-lighten-3">Demo Class</h1>
         <blockquote class="">Draw Recognition</blockquote>
-        <a class="navigate" href="./draw.html">Let's go <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="navigate" href="./draw">Let's go <i class="fa-solid fa-arrow-right"></i></a>
     </main>
   </body>
 </html>

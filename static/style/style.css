@@ -47,13 +47,13 @@ body {
     align-items: center;
     height: 100px;
     padding: 10px 20px;
-    background-color: #ffd139;
+    background-color: #52ACF0;
     box-shadow: 0 2px 5px rgba(8, 8, 8, 0.3);
 }
 
 .btn__Recognition{
-    background-color: rgb(75, 196, 95);
-    color: white;
+    background-color: #A8D4F5;
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -63,9 +63,9 @@ body {
 }
 
 .btn__Recognition:hover{
-    color: rgb(75, 196, 95);
-    background-color: white;
-    border: 2px solid rgb(75, 196, 95);
+    color: #A8D4F5;
+    background-color: #fff;
+    border: 3px solid #A8D4F5;  
 }
 
 .Draw__tools{
@@ -85,16 +85,26 @@ body {
     border: none;
     cursor: pointer;
     padding: 5px;
-    border: 2px solid transparent;
+    border: 3px solid transparent;
 }
 
 .btn__clear:hover{
-    background-color: white;
+    background-color: #A8D4F5;
     border-radius: 5px;
-    border: 2px solid rgb(196, 75, 75);
+    border: 1px solid #fff;
 }
 
 .eraser {
+    width: 35px;
+    height: 35px;
+}
+
+.pencil {
+    width: 45px;
+    height: 35px;
+}
+
+.palette{
     width: 35px;
     height: 35px;
 }
@@ -111,7 +121,7 @@ body {
 
 .line__width i,
 .select__color i {
-    margin-right: 10px;
+    margin-right: 30px;
 }
 
 .line__width{
@@ -130,8 +140,9 @@ body {
 
 .drawing__board{
     display: flex;
-    /* margin-top: 10px; */
+    margin-top: 10px;
     justify-content: center;
+    
 }
 
 .show__result{
