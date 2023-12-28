@@ -6,7 +6,7 @@ import tensorflow as tf
 
 app = Flask(__name__)
 
-model = tf.keras.models.load_model('Web\Hand-digit-recoginition-flask\model\keras.h5')
+model = tf.keras.models.load_model('model/keras.h5')
 model.make_predict_function()
 
 @app.route('/')
@@ -31,7 +31,7 @@ def recognize():
         with open("temp.jpg", "wb") as temp:
             temp.write(imgBytes)
             
-        with open("Web\Hand-digit-recoginition-flask\class_names.txt") as f:
+        with open("class_names.txt") as f:
             classes = f.readlines()
         classes = [c.replace('\n','').replace(' ','_') for c in classes]
 
